@@ -65,7 +65,7 @@ function LineChart() {
         <div className="bg-white p-8 shadow-md rounded-md space-y-2 grid-rows-1	 ">
           <div className="text-gray-600 mb-8 font-semibold">Medição Horária (Por Dia)</div>
           <div className="grid grid-cols-3 gap-8 pb-3 ">
-            <select onChange={onDayChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select onChange={onDayChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-slate-700 dark:focus:ring-blue-500 dark:focus:border-blue-500">
               <option disabled>Selecione o dia</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -100,7 +100,7 @@ function LineChart() {
               <option value="31">31</option>
 
             </select>
-            <select onChange={onMonthChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select onChange={onMonthChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-slate-700 dark:focus:ring-blue-500 dark:focus:border-blue-500">
               <option disabled>Selecione o mês</option>
               <option value="1">Janeiro</option>
               <option value="2">Fevereiro</option>
@@ -115,7 +115,7 @@ function LineChart() {
               <option value="11">Novembro</option>
               <option value="12">Dezembro</option>
             </select>
-            <select onChange={onYearChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select onChange={onYearChange}className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-50 dark:border-gray-300 dark:placeholder-gray-400 dark:text-slate-700 dark:focus:ring-blue-500 dark:focus:border-blue-500">
               <option disabled>Selecione o ano</option>
               <option value="2021">2021</option>
               <option value="2022">2022</option>

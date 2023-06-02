@@ -12,8 +12,8 @@ function SkeletonListTable() {
                     </div>
                     <div className="space-y-5 pt-3">
 
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-500  dark:bg-gray-700 dark:text-gray-300">
+                        <table className="w-full text-sm text-left text-gray-500">
+                            <thead className="text-xs text-gray-500  dark:bg-white dark:text-gray-300">
                                 <tr>
                                     <th scope="col" className="px-6 py-3">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-20 "></div>
@@ -46,7 +46,7 @@ function SkeletonListTable() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -72,7 +72,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -98,7 +98,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -124,7 +124,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -150,7 +150,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -176,7 +176,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -202,7 +202,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -228,7 +228,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -254,7 +254,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 
@@ -280,7 +280,7 @@ function SkeletonListTable() {
 
                                     </td>
                                 </tr>
-                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
+                                <tr className="bg-white border-b dark:bg-white dark:text-gray-300 text-xs">
                                     <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
                                         <div className="h-4 bg-slate-300 rounded col-span-1 w-32 "></div>
 

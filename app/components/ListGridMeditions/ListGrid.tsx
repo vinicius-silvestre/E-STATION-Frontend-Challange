@@ -76,8 +76,8 @@ function ListItem(){
                 <div className="bg-white p-8 shadow-md rounded-md space-y-2 grid-rows-1	 ">
                     <div className="text-gray-600 mb-5 font-semibold">Medições</div>
                     <div className="relative overflow-x-auto sm:rounded-lg">
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-500  dark:bg-gray-700 dark:text-gray-300">
+                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-200">
+                            <thead className="text-xs text-gray-500  bg-white dark:bg-slate-300 dark:text-gray-500">
                                 <tr>
                                     <th onClick={() => sorting("agent")} scope="col" className="px-6 py-3">
                                         Agente
@@ -116,23 +116,23 @@ function ListItem(){
                             </thead>
                             <tbody>
                                 {data.map((data, index) => (
-                                    <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 text-xs">
-                                        <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-white">
+                                    <tr key={index} className="bg-white border-b dark:bg-gray-100 dark:border-gray-400 text-xs">
+                                        <th scope="row" className="px-6 py-4 font-normal whitespace-nowrap dark:text-slate-700">
                                             {data.agent}
                                         </th>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 dark:text-slate-700">
                                             {data.meter}
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 dark:text-slate-700">
                                             {data.reference}
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 dark:text-slate-700">
                                             {data.hour}
                                         </td>
-                                        <td className="px-6 py-4 ">
+                                        <td className="px-6 py-4 dark:text-slate-700">
                                             {data.consumption}
                                         </td>
-                                        <td className="px-6 py-4 ">
+                                        <td className="px-6 py-4 dark:text-slate-700">
                                             {data.origin}
                                         </td>
                                     </tr>
@@ -151,10 +151,10 @@ function ListItem(){
 
                                 <a className="relative inline-flex items-center  ">
                                     
-                                    <a className="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-400 dark:bg-gray-800 dark:border-blue-400 dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-white">
+                                    <a className="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-400 dark:bg-gray-100 dark:border-blue-400 dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-blue-400">
                                         Anterior
                                     </a>
-                                    <a className="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-400 dark:bg-gray-800 dark:border-blue-400 dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-white">
+                                    <a className="inline-flex items-center px-4 py-2 mr-3 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-slate-100 hover:text-blue-400 dark:bg-gray-100 dark:border-blue-400 dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-blue-400">
                                         Próximo
                                     </a>
                                 </a>
