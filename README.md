@@ -17,7 +17,7 @@ npm run dev
 Logo em seguida, acesse a pasta /mock/data e rode o json-server na porta 3001
 
 ```bash
-json-server db.json --port 3001
+npx json-server --watch db.json --port 3001
 ```
 
 Abra [http://localhost:3000](http://localhost:3000) em seu navegador e veja o resultado.
@@ -30,8 +30,8 @@ O desafio será implementar um dashboard com dados de medição de energia elét
 - [x] Uma visão exibindo apenas as medições hora a hora com base no dia, mês e ano selecionados
 - [x]  Uma visão com as medições horárias da última semana
 - [x]  Uma tabela com a relação de medições que permita:
-    -   [x] Filtrar medições por período
-    -   [x] Paginação dos resultados retornados
+    -   [ ] Filtrar medições por período
+    -   [x]  Paginação dos resultados retornados
     -   [x]  Ordenação pelos campos: Agente, Ponto, Data, Hora, Consumo Ativo (MWh) e Origem
  
 
