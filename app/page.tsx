@@ -3,16 +3,15 @@ import BarChart from "./components/Charts/BarChart";
 import ListItem from "./components/ListGridMeditions/ListGrid";
 import LineChart from "./components/Charts/LineChart";
 import LineChartHistory from "./components/Charts/LineChartHistory";
-import SkeletonListTable from "./components/Skeleton/SkeletonList";
 
 
 
  function Home() {
   return (
-    <div className="p-20">
-      <div className="pl-10 text-gray-600  font-semibold">Dashboard</div>
+    <div className="p-2 lg:p-20 ">
+      <div className="pl-10 pt-5 text-gray-600  font-semibold">Dashboard</div>
       <div className="pl-10 text-gray-600  text-sm">Infomrações baseadas nos dados de medições acolhidos na CCEE.</div>
-      <div className="grid grid-cols-2 ">
+      <div className="grid lg:grid-cols-2 grid-cols-1">
         <BarChart /> 
         <LineChart />
         </div>

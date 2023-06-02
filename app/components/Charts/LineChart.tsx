@@ -2,7 +2,6 @@
 
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SkeletonLine from "../Skeleton/SkeletonLine";
@@ -17,49 +16,51 @@ function LineChart() {
   const [data, setData] = useState();
 
 
-  function onYearChange(event) {
+  function onYearChange(event: { target: { value: React.SetStateAction<string>; }; }) {
     setYear(event.target.value);
-    console.log(year, 'valor ano')
   }
 
-  function onMonthChange(event) {
+  function onMonthChange(event: { target: { value: React.SetStateAction<string>; }; }) {
     setMonth(event.target.value);
-    console.log(month, 'valor mes')
   }
 
-  function onDayChange(event) {
+  function onDayChange(event: { target: { value: React.SetStateAction<string>; }; }) {
     setDay(event.target.value);
-    console.log(day, 'valor dia')
   }
 
+//Requisição dos dados da API via axios / json-server
 
   useEffect(() => {
+    loadLineChart();  
+  }, [year, month, day])
 
-
-    axios.get(`http://localhost:3001/data?year=${year}&month=${month}&day=${day}`).then((res) => {
+  const loadLineChart = async () =>{
+  axios.get(`http://localhost:3001/data?year=${year}&month=${month}&day=${day}`).then((res) => {
       const consumption: any[] = [];
       const hour: any[] = [];
       const day = [];
       const month: any[] = [];
       res.data.map((item: { consumption: any; hour: any; day: any; month: any; }) => {
-        consumption.push(item.consumption)
-        hour.push(item.hour)
+        consumption.push(item.consumption.toFixed(0))
         day.push(item.day)
         month.push(item.month)
         setCategory(hour)
         setData(consumption)
       })
       setTimeout(async () => {
-        const res = await axios.get("http://localhost:3001/data?_page=2&_limit=10");
+        const res: any = await axios.get("http://localhost:3001/data?_page=2&_limit=10");
         setChartLine(res)
       }, 2500)
-      // console.log("media", consumption[0], hour[0] * day[0] )
+    }).catch(err => {
+      console.log(err)
     })
-  }, [year, month, day])
+  }
+  //Fim da requisição dos dados da API via axios / json-server
+
 
 
   return (
-    <div className="pt-5 pl-5 pr-10">
+    <div className="pt-5 pl-2 pr-2  lg:pt-5 lg:pl-5 lg:pr-10">
       {chart && (
         <div className="bg-white p-8 shadow-md rounded-md space-y-2 grid-rows-1	 ">
           <div className="text-gray-600 mb-8 font-semibold">Medição Horária (Por Dia)</div>
@@ -138,16 +139,59 @@ function LineChart() {
                     enabled: false
                   }
                 }, xaxis: {
+                  labels:{ 
+                    show: false
+                  },
                   categories: category,
-
+                },annotations: {
+                  yaxis: [
+                    {
+                      y: 110,
+                      borderColor: '#e30000',
+                      label: {
+                        borderColor: '#e30000',
+                        style: {
+                          color: '#fff',
+                          background: '#e30000'
+                        },
+                        text: 'Flex Máxima'
+                      }
+                    },
+                    {
+                      y: 100,
+                      borderColor: '#1ac600',
+                      label: {
+                        borderColor: '#1ac600',
+                        style: {
+                          color: '#fff',
+                          background: '#1ac600'
+                        },
+                        text: 'Consumo Flat'
+                      }
+                    },
+                    {
+                      y: 90,
+                      borderColor: '#2800c6',
+                      label: {
+                        borderColor: '#2800c6',
+                        style: {
+                          color: '#fff',
+                          background: '#2800c6'
+                        },
+                        text: 'Flex Mínima'
+                      }
+                    }
+                  ]
                 },
                 dataLabels: {
                   enabled: false,
-
+                  
                 }
               }}
               series={[
-                { name: "Consumo", data: data }
+                { name: "Consumo", data: data },
+               
+                
               ]}
               type="line"
               height={290}
